@@ -196,3 +196,9 @@ input[type=checkbox]:checked ~ .menu{
 input[type=checkbox]:checked ~ #debug{
     display: block;
 }
+
+/* @media (max-width: 334px) {
+    .logo .username {
+        font-size: 15px;
+    }
+} */
