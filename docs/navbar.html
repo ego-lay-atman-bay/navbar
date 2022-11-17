@@ -2,33 +2,46 @@
 <!-- <script src="/assets/jquery-3.6.0.min.js"></script> -->
 <script src="/navbar/navbar.js"></script>
 
-<nav id="topnav" class="navbar">
-    <div class="logo" ontouchstart="">
-        <a href="/">
+<nav id="primary-nav" class="primary-nav">
+
+    <a class="logo"  href="/" ontouchstart>
         <img src="/assets/profile pic.png" height="40">
         <span class="username">ego-lay-atman-bay</span>
     </a>
-    </div>
+
+    <button class="hamburger-button" aria-controls="nav-links" aria-expanded="false">
+        <svg fill="var(--hamburger-color)" class="hamburger" viewbox="0 0 100 100" width="50" height="50">
+            <rect class="line top"
+            width="80" height="10"
+            x="10" y="25"
+            rx="5">
+        </rect>
+            <rect class="line middle"
+            width="80" height="10"
+            x="10" y="45"
+            rx="5">
+        </rect>
+            <rect class="line bottom"
+            width="80" height="10"
+            x="10" y="65"
+            rx="5">
+        </rect>
+        </svg>
+    </button>
 
     <!-- NAVIGATION MENU -->
-    <ul class="nav-links">
-        <!-- USING CHECKBOX HACK -->
-        <input type="checkbox" id="hamburger" hidden />
-        <label for="hamburger" class="hamburger">&#9776;</label>
-        <!-- NAVIGATION MENUS -->
-        <div class="menu">
-            <li ontouchstart=""><a href="/" class="hover">Home</a></li>
-            <li ontouchstart=""><a href="/#about" class="hover">About</a></li>
-            <li class="projects dummy" ontouchstart="">
-                <a>Projects</a>
-                <ul class="dropdown">
-                    <li><a href="/scratch-node-editor">Scratch Node Editor</a></li>
-                    <li><a href="/super-mario-maker-v6">Expanded Super Mario Maker v.6</a></li>
-                    <li><a href="/snap-extensions">Snap<i>!</i> Extensions</a></li>
-                    <li><a href="/scratch-video">Scratch video</a></li>
-                </ul>
-            </li>
-            <li><a href="/#social" ontouchstart="">Social</a></li>
-        </div>
+    <ul class="nav-links" id="nav-links">
+        <li ontouchstart=""><a tabindex="0.1" href="/" class="hover">Home</a></li>
+        <li ontouchstart=""><a tabindex="0.1" href="/#about" class="hover">About</a></li>
+        <li class="dropdown" ontouchstart="">
+            <a tabindex="0.1">Projects</a>
+            <ul class="dropdown-menu">
+                <li><a tabindex="0.1" href="/scratch-node-editor">Scratch Node Editor</a></li>
+                <li><a tabindex="0.1" href="/super-mario-maker-v6">Expanded Super Mario Maker v.6</a></li>
+                <li><a tabindex="0.1" href="/snap-extensions">Snap<i>!</i> Extensions</a></li>
+                <li><a tabindex="0.1" href="/scratch-video">Scratch video</a></li>
+            </ul>
+        </li>
+        <li class=""><a href="/#social" ontouchstart="">Social</a></li>
     </ul>
 </nav>
